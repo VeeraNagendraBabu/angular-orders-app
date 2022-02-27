@@ -9,10 +9,10 @@ import { Product } from '../models/product.interface';
 export class AppDataApiService {
   products$: Observable<Product[]> = this.http.get<Product[]>('api/products');
 
-  customers$: Observable<Customer[]> =
-    this.http.get<Customer[]>('api/customers');
+  customers$: Observable<Customer[]> = this.http.get<Customer[]>('api/customers');
 
   orders$: Observable<Order[]> = this.http.get<Order[]>('api/orders');
 
   constructor(private http: HttpClient) {}
+
 }
